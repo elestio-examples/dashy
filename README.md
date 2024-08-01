@@ -86,19 +86,23 @@ If you want to grant admin privileges to a user, add the type: admin line under 
                 hash: hashed_password
                 type: admin
 
+## Generate hashed password
+
+Open a new terminal then do this command:
+
+./scripts/generate-hash.sh
+
 ## Adding Widgets
 
-To add new widgets, include them in your `my-config.yml` file. For example, to add a clock widget, use the following format:
+To add new widgets, include them in your `my-config.yml` file. For example, to add a clock widget, use the following format under sections:
 
-    appConfig:
-        widgets:
-            - name: Aria Info
+        - name: Aria Info
             widgets:
-                - type: clock
+            - type: clock
                 options:
-                    timeZone: Europe/London
-                    format: en-GB
-                    hideDate: false
+                timeZone: Europe/London
+                format: en-GB
+                hideDate: false
 
 ## Documentation
 
