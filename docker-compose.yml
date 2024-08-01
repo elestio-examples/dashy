@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  dashy:
+    image: lissy93/dashy:${SOFTWARE_VERSION_TAG}
+    restart: always
+    volumes:
+      - ./my-config.yml:/app/user-data/conf.yml
+      - ./item-icons:/app/user-data/item-icons/
+    ports:
+      - 172.17.0.1:17054:8080
+    environment:
+      - NODE_ENV=production
